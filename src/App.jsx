@@ -8,8 +8,6 @@ import ScenarioScripts from './components/ScenarioScripts'
 import IncidentRecorder from './components/IncidentRecorder'
 import IncidentHistory from './components/IncidentHistory'
 import PremiumFeatures from './components/PremiumFeatures'
-import LoadingSpinner from './components/LoadingSpinner'
-
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
