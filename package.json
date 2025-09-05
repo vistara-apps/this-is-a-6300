@@ -11,7 +11,17 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "lucide-react": "^0.263.1"
+    "lucide-react": "^0.263.1",
+    "@supabase/supabase-js": "^2.39.0",
+    "openai": "^4.20.1",
+    "axios": "^1.6.2",
+    "react-router-dom": "^6.20.1",
+    "@stripe/stripe-js": "^2.4.0",
+    "react-query": "^3.39.3",
+    "js-cookie": "^3.0.5",
+    "date-fns": "^2.30.0",
+    "react-hot-toast": "^2.4.1",
+    "framer-motion": "^10.16.16"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
