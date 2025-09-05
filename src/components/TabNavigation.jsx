@@ -1,0 +1,41 @@
+import React from 'react'
+import { BookOpen, MessageSquare, Video, Clock } from 'lucide-react'
+
+const TabNavigation = ({ activeTab, onTabChange }) => {
+  const tabs = [
+    { id: 'rights', label: 'Rights', icon: BookOpen },
+    { id: 'scripts', label: 'Scripts', icon: MessageSquare },
+    { id: 'record', label: 'Record', icon: Video },
+    { id: 'history', label: 'History', icon: Clock },
+  ]
+
+  return (
+    <nav className="fixed bottom-0 left-0 right-0 bg-surface border-t border-gray-100 px-4">
+      <div className="max-w-screen-md mx-auto">
+        <div className="flex items-center justify-around py-2">
+          {tabs.map((tab) => {
+            const Icon = tab.icon
+            const isActive = activeTab === tab.id
+            
+            return (
+              <button
+                key={tab.id}
+                onClick={() => onTabChange(tab.id)}
+                className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-colors ${
+                  isActive 
+                    ? 'text-accent bg-accent/10' 
+                    : 'text-text-secondary hover:text-primary hover:bg-gray-50'
+                }`}
+              >
+                <Icon className="w-5 h-5" />
+                <span className="text-xs font-medium">{tab.label}</span>
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+export default TabNavigation
